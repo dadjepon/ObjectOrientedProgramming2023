@@ -8,27 +8,36 @@ import java.util.Scanner;
  *
  */
 public class Example2_Essentials {
-
-	/**
-	 * 
-	 */
-	public Example2_Essentials() {
-		// TODO Auto-generated constructor stub
-		
-	}
-
-	/**
+    /**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner keyboard = new Scanner(System.in);
-		String productName = keyboard.nextLine();
-		double productPrice = keyboard.nextDouble();
-		int productQuantity = keyboard.nextInt();
-		double cost= productPrice * productQuantity;
-		System.out.println("The cost is " + cost);
-		
+        double discount = 0;
 
+        //Initializing Scanner
+		Scanner keyboard = new Scanner(System.in);
+        
+        //Asking for customer Status, saved to customerStatus variable.
+        System.out.println("Please enter your status. (Student/Staff/Faculty/Visitor)");
+        String customerStatus = keyboard.nextLine();
+
+        //Checking if customer is a student, and applying discount if so.
+        if(customerStatus.equalsIgnoreCase("Student")){
+            discount = 0.25;
+            System.out.println("As a student, you get a 25% discount on prices!\n");}
+		
+        System.out.println("Please enter the name of the product");
+        String productName = keyboard.nextLine();
+
+        System.out.println("Please enter the price of the product");
+		double productPrice = keyboard.nextDouble();
+
+        System.out.println("Please enter the quantity you wish to buy");
+		int productQuantity = keyboard.nextInt();
+
+		double cost = (productPrice - (productPrice * discount)) * productQuantity;
+		System.out.println("The cost of these " + productName + "'s is GHS" + cost);
+        keyboard.close();
 	}
 
 }
