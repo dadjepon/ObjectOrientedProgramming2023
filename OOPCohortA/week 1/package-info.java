@@ -1,8 +1,8 @@
 /**
- * 
+ *
  */
 /**
  * @author dadjepon
  *
  */
-package gh.edu.ashesi.OOPExample1package;
+package gh.edu.ashesi.OOPCohortA;
