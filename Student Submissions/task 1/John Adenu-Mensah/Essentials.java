@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * @author dadjepon
  * @author John Adenu-Mensah
- *
+ * @version 1.0.1
  */
 public class Essentials {
 
