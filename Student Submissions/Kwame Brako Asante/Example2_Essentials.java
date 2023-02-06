@@ -36,7 +36,7 @@ public class Example2_Essentials {
 		double cost= productPrice * productQuantity;
 
         //Computation of discount if user is a student
-        if (buyerStatus.equals("student")){
+        if (buyerStatus.equalsIgnoreCase("student")){
             double discount = 0.25 * cost;
             cost -= discount;
         }
